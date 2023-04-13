@@ -1,4 +1,8 @@
 const card = document.querySelector(".card");
+const title = document.querySelector("#title").value;
+console.log(title);
+const author = document.querySelector("#author").value;
+const pages = document.querySelector("#pages").value;
 const myLibrary = [{ author: "Brandon", title: "elantris", pages: 213 }];
 
 function Book(title, author, pages) {
