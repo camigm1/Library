@@ -1,0 +1,17 @@
+body {
+  box-sizing: border-box;
+  background-color: #ffcdb2;
+}
+
+/* div {
+  border: 1px solid black;
+} */
+
+.card {
+  width: 30%;
+  border: 1px solid black;
+  margin-top: 3%;
+  text-align: center;
+  background-color: #6d6875;
+  color: #e5e5e5;
+}
