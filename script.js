@@ -1,13 +1,14 @@
 const card = document.querySelector(".card");
-const bookTitle = document.querySelector("#title").value;
+const bookTitle = document.querySelector("#title");
 console.log(bookTitle);
-const bookAuthor = document.querySelector("#author").value;
-const bookPages = document.querySelector("#pages").value;
+const bookAuthor = document.querySelector("#author");
+const bookPages = document.querySelector("#pages");
 const buttonSubmit = document.getElementById("buttonSubmit");
 
 const myLibrary = [{ author: "Brandon", title: "elantris", pages: 213 }];
 
 buttonSubmit.addEventListener("click", function () {
+  // console.log(bookTitle.value);
   addBookToLibrary();
 });
 
@@ -16,7 +17,7 @@ function Book(title, author, pages) {
 }
 
 function addBookToLibrary() {
-  const newBook = new Book(bookTitle, bookAuthor, bookPages);
+  const newBook = new Book(bookTitle.value, bookAuthor.value, bookPages.value);
   myLibrary.push(newBook);
 }
 
@@ -36,3 +37,8 @@ function display(object) {
 }
 
 display(myLibrary);
+
+buttonSubmit.addEventListener("click", function () {
+  console.log(bookTitle.value);
+  addBookToLibrary();
+});
