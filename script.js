@@ -1,4 +1,4 @@
-const card = document.querySelector(".card");
+const cardSection = document.querySelector(".card-section");
 const bookTitle = document.querySelector("#title");
 console.log(bookTitle);
 const bookAuthor = document.querySelector("#author");
@@ -29,15 +29,18 @@ console.log(newBook);
 
 function display(object) {
   for (let book of myLibrary) {
+    const card = document.createElement("div");
     const title = document.createElement("h3");
     const author = document.createElement("h4");
     const pages = document.createElement("h4");
     title.innerHTML = `Book Title: ${object[0].title}`;
     author.textContent = `Auhor:${object[0].author}`;
     pages.textContent = `Number of Pages: ${object[0].pages}`;
+    card.classList.add("card");
     card.appendChild(title);
     card.appendChild(author);
     card.appendChild(pages);
+    cardSection.appendChild(card);
   }
 }
 
