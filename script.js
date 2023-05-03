@@ -10,22 +10,24 @@ const myLibrary = [
   { author: "Brandon", title: "elantris", pages: 213 },
 ];
 
-buttonSubmit.addEventListener("click", function () {
-  // console.log(bookTitle.value);
-  addBookToLibrary();
-});
+console.log(myLibrary);
+
+// buttonSubmit.addEventListener("click", function () {
+//   console.log(bookTitle);
+//   addBookToLibrary();
+// });
 
 function Book(title, author, pages) {
   (this.title = title), (this.author = author), (this.pages = pages);
 }
 
-function addBookToLibrary() {
-  const newBook = new Book(bookTitle.value, bookAuthor.value, bookPages.value);
+function addBookToLibrary(bookTitle, bookAuthor, bookPages) {
+  const newBook = new Book(bookTitle, bookAuthor, bookPages);
   myLibrary.push(newBook);
 }
 
-const newBook = new Book("Jane Eyre", "Charlotte", 350);
-console.log(newBook);
+// const janeEyre = new Book("Jane Eyre", "Charlotte", 350);
+// myLibrary.push(janeEyre);
 
 function display(object) {
   for (let book of myLibrary) {
@@ -44,9 +46,13 @@ function display(object) {
   }
 }
 
-display(myLibrary);
-
-buttonSubmit.addEventListener("click", function () {
-  console.log(bookTitle.value);
-  addBookToLibrary();
+buttonSubmit.addEventListener("click", function (event) {
+  event.preventDefault();
+  const newTitle = bookTitle.value;
+  console.log(newTitle);
+  const newAuthor = bookAuthor.value;
+  const newPages = bookPages.value;
+  addBookToLibrary(newTitle, newAuthor, newPages);
 });
+
+display(myLibrary);
