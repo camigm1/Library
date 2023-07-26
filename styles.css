@@ -12,6 +12,7 @@ button {
   border: 15px solid black;
   margin-top: 3%;
   text-align: center;
+  padding: 3% 0 3%;
   background-color: #6d6875;
   color: #e5e5e5;
 }
