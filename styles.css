@@ -1,10 +1,12 @@
 body {
   box-sizing: border-box;
   background-color: #ffcdb2;
+  font-family: "Kanit", sans-serif;
 }
 
 button {
   background-color: aquamarine;
+  padding: 2% 3%;
 }
 
 .card {
@@ -15,4 +17,32 @@ button {
   padding: 3% 0 3%;
   background-color: #6d6875;
   color: #e5e5e5;
+}
+
+.card-section {
+  width: 80%;
+  display: flex;
+  gap: 10px;
+  margin: 0 auto;
+}
+
+/**Header**/
+
+.library-header {
+  border: 1px solid black;
+  border-radius: 3px;
+  width: 80%;
+  margin: 3% auto;
+}
+
+/**form**/
+
+form {
+  /* display: flex;
+  justify-content: space-around; */
+}
+
+input {
+  height: 7%;
+  margin-right: 50px;
 }
